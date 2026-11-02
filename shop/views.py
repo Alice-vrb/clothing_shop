@@ -15,3 +15,10 @@ def product(request, product_id: int):
 
 def category(request, category_name: str):
     return HttpResponse(category_name.upper())
+
+def search(request):
+    query = request.GET.get('q', '')
+    if query:
+        return HttpResponse(f"You searched: {query}")
+    else:
+        return HttpResponse("Enter a search query")
