@@ -1,18 +1,15 @@
 from django.views import View
-from django.http import HttpResponse, Http404, JsonResponse
+from django.http import HttpResponse, Http404
+from django.shortcuts import render
 
 
-class TextPageView(View):
-    text = ''
-
+class HomeView(View):
     def get(self, request):
-        return HttpResponse(self.text)
+        return render(request, 'home.html')
 
-class HomeView(TextPageView):
-    text = "Clothes shop"
-
-class AboutView(TextPageView):
-    text = "This is a clothes shop."
+class AboutView(View):
+    def get(self, request):
+        return render(request, 'about.html')
 
 
 class ProductView(View):
