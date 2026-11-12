@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}About | ClothesShop{% endblock %}
+
+{% block active_about %}active{% endblock %}
+
+{% block heading %}About{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="fw-semibold mb-3">About This Project</h2>
+
+        <p class="lead text-body-secondary mb-4">
+            Welcome! This is a practice e-commerce clothing store built while learning Django and web development.
+        </p>
+
+        <h4 class="fw-semibold mb-2">Why I Built This</h4>
+        <p class="lh-lg text-body-secondary mb-4">
+            This store is not a real commercial shop. It is my pet project designed to practice backend development, database models, and responsive design before moving on to larger, portfolio-ready applications.
+        </p>
+
+        <h4 class="fw-semibold mb-2">Technologies Used</h4>
+        <ul class="text-body-secondary mb-4">
+            <li><strong>Backend:</strong> Python, Django</li>
+            <li><strong>Frontend:</strong> HTML, CSS, Bootstrap 5</li>
+            <li><strong>Database:</strong> SQLite</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
